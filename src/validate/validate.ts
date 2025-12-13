@@ -1,4 +1,4 @@
-import type { Assert, Check } from "./types/validate.d.ts";
+import type { Assert, Check } from "./types.ts";
 
 const _check_string: Check["string"] = (value) => typeof value === "string";
 const _check_number: Check["number"] = (value) => typeof value === "number";
@@ -121,3 +121,5 @@ export const check: Check = {
 export const nonNullable = <T>(value: T): NonNullable<T> =>
   (assert.false(value == null, "The provided value is null or undefined"), value) as NonNullable<T>;
 export const isNonNullable = <T>(value: T): value is NonNullable<T> => value != null;
+
+export * from "./types.ts";
