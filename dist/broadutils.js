@@ -1,7 +1,7 @@
-export * from "./canvas/canvas.js";
-export * from "./data/data.js";
-export * from "./misc/misc.js";
-export * from "./network/network.js";
-export * from "./validate/validate.js";
+export const canvas = await import("./canvas/canvas.js");
+export const data = await import("./data/data.js");
+export const misc = await import("./misc/misc.js");
+export const network = await import("./network/network.js");
+export const validate = await import("./validate/validate.js");
 export * from "./types/types.js";
 //# sourceMappingURL=broadutils.js.map

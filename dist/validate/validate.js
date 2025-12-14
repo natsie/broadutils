@@ -78,7 +78,8 @@ export const check = {
     regexp: _check_regexp,
     nonNullable: _check_nonNullable,
 };
-export const nonNullable = (value) => (assert.false(value == null, "The provided value is null or undefined"), value);
 export const isNonNullable = (value) => value != null;
+export const nonNullable = (value, message) => (assert.false(value == null, message || "The provided value is null or undefined"),
+    value);
 export * from "./types.js";
 //# sourceMappingURL=validate.js.map
