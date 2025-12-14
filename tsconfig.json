@@ -24,5 +24,5 @@
     "moduleDetection": "force",
     "skipLibCheck": true
   },
-  "exclude": ["dist", "src/tests"]
+  "exclude": ["dist", "scripts", "src/tests"]
 }
