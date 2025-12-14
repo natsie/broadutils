@@ -118,8 +118,9 @@ export const check: Check = {
   nonNullable: _check_nonNullable,
 };
 
-export const nonNullable = <T>(value: T): NonNullable<T> =>
-  (assert.false(value == null, "The provided value is null or undefined"), value) as NonNullable<T>;
 export const isNonNullable = <T>(value: T): value is NonNullable<T> => value != null;
+export const nonNullable = <T>(value: T, message?: string): NonNullable<T> =>
+  (assert.false(value == null, message || "The provided value is null or undefined"),
+  value) as NonNullable<T>;
 
 export * from "./types.ts";
