@@ -1,6 +1,7 @@
-export * from "./canvas/canvas.ts";
-export * from "./data/data.ts";
-export * from "./misc/misc.ts";
-export * from "./network/network.ts";
-export * from "./validate/validate.ts";
+export const canvas = await import("./canvas/canvas.ts");
+export const data = await import("./data/data.ts");
+export const misc = await import("./misc/misc.ts");
+export const network = await import("./network/network.ts");
+export const validate = await import("./validate/validate.ts");
+
 export * from "./types/types.ts";
