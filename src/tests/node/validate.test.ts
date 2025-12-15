@@ -466,8 +466,8 @@ describe("Validation utilities", () => {
     });
 
     it("throws if null or undefined", () => {
-      expect(() => nonNullable(null)).toThrow();
       expect(() => nonNullable(undefined)).toThrow();
+      expect(() => nonNullable(null, "is null")).toThrow("is null");
     });
   });
 
